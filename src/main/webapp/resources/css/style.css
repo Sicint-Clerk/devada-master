@@ -1,0 +1,222 @@
+/* Css Styles                        */
+/** Stephens - Portfolio Template  Author : TavillaThemes Copyright 2016
+/*------------------------ 1 Body and Core Css ------------------------*/		
+
+@font-face {font-family:"Gujrati Saral-1";src:url("../fonts/gujarati/Gujrati-Saral-1.eot?") format("eot"),url("../fonts/gujarati/Gujrati-Saral-1.woff") format("woff"),url("../fonts/gujarati/Gujrati-Saral-1.ttf") format("truetype"),url("../fonts/gujarati/Gujrati-Saral-1.svg#Gujrati-Saral-1") format("svg");font-weight:normal;font-style:normal;}
+.guj-font{font-family:"Gujrati Saral-1"}
+body{font-family:Montserrat,sans-serif}
+html{height:100%}
+p{font-size:13px;color:#777;line-height:24px}
+nav{position:fixed;background:#fff;z-index:10;width:100%;padding:30px;display:none;-webkit-box-shadow:-5px 10px 12px -10px rgba(201,201,201,.67);-moz-box-shadow:-5px 10px 12px -10px rgba(201,201,201,.67);box-shadow:-5px 10px 12px -10px rgba(201,201,201,.67)}
+.nav-menu{float:right;line-height:32px}
+.logo,nav ul li{float:left}
+nav ul li{margin-right:15px;font-size:14px;color:#666}
+nav ul li a{color:#000;margin-right:5px}
+nav ul li a:hover{color:#afafaf!important}
+.responsive{display:none;font-size:23px}
+.active{color:#afafaf}
+footer{background:#000;padding:90px 0;margin-top:90px;text-align:center}
+footer p{line-height:20px;margin-top:20px}
+.site-button:focus{outline:0}
+.nav-menu li a:focus{color:#000}
+.ok{background:green!important;border:2px solid green!important;color:#fff}
+input:-webkit-autofill{-webkit-box-shadow:0 0 0 1000px #fff inset}
+.contact-form textarea.reqError,.form-inp.reqError{border-color:red}
+.content{margin-top:60px}
+.subpage-nav{display:block!important;position:relative}
+.page-title{display:table-cell;vertical-align:middle;text-align:center;z-index:2;position:relative}
+.page-title h1{font-size:75px;color:#fff;font-weight:700;letter-spacing:-3px;margin-bottom:20px}
+
+/*preloader */
+#preloader{background-color:#000;position:fixed;top:0;left:0;width:100%;height:100%;z-index:100;display:table;text-align:center}.spinner{margin:auto;text-align:center;display:table-cell;vertical-align:middle}@-ms-keyframes uil-ripple{0%,100%{opacity:0}0%{width:0;height:0;margin:0}33%{width:44%;height:44%;margin:-22% 0 0 -22%;opacity:1}100%{width:88%;height:88%;margin:-44% 0 0 -44%}}@-moz-keyframes uil-ripple{0%{width:0;height:0;opacity:0;margin:0}33%{width:44%;height:44%;margin:-22% 0 0 -22%;opacity:1}100%{width:88%;height:88%;margin:-44% 0 0 -44%;opacity:0}}@-webkit-keyframes uil-ripple{0%{width:0;height:0;opacity:0;margin:0}33%{width:44%;height:44%;margin:-22% 0 0 -22%;opacity:1}100%{width:88%;height:88%;margin:-44% 0 0 -44%;opacity:0}}@-o-keyframes uil-ripple{0%{width:0;height:0;opacity:0;margin:0}33%{width:44%;height:44%;margin:-22% 0 0 -22%;opacity:1}100%{width:88%;height:88%;margin:-44% 0 0 -44%;opacity:0}}@keyframes uil-ripple{0%{width:0;height:0;opacity:0;margin:0}33%{width:44%;height:44%;margin:-22% 0 0 -22%;opacity:1}100%{width:88%;height:88%;margin:-44% 0 0 -44%;opacity:0}}.uil-ripple-css{background:0 0;position:relative;width:200px;height:200px;margin:0 auto}.uil-ripple-css div{position:absolute;top:50%;left:50%;margin:0;width:0;height:0;opacity:0;border-radius:50%;border-width:12px;border-style:solid;-ms-animation:uil-ripple 2s ease-out infinite;-moz-animation:uil-ripple 2s ease-out infinite;-webkit-animation:uil-ripple 2s ease-out infinite;-o-animation:uil-ripple 2s ease-out infinite;animation:uil-ripple 2s ease-out infinite}.uil-ripple-css div:nth-of-type(1){border-color:#fff}.uil-ripple-css div:nth-of-type(2){border-color:#fff;-ms-animation-delay:1s;-moz-animation-delay:1s;-webkit-animation-delay:1s;-o-animation-delay:1s;animation-delay:1s}
+
+/*------------------------ 2 Home ------------------------*/		
+.home{background:url(../images/home.jpg) bottom center;width:100%;display:table}
+.home-content{display:table-cell;vertical-align:middle;text-align:center;z-index:2;position:relative}
+.home-content h1{font-size:60px;color:#fff;font-weight:500;letter-spacing:-3px;margin-bottom:20px}
+.home:before{content:"";position:absolute;top:0;left:0;width:100%;height:100%;background-color:rgba(0,0,0,.5);z-index:1}
+.social{height:30px}
+.social a{color:#fff;font-size:15px;margin:0 15px;transition:all ease .3s}
+.social a:hover{transition:all ease .3s;opacity:.5}
+.home-down,.home-down:hover{transition:all .3s ease;color:#fff}
+.home-down{font-size:40px;padding-top:40px;padding-left:0;display:inline-block;position:absolute;bottom:0}
+.home-down:focus{color:#fff}
+
+/* arrow css3 animation */
+@-webkit-keyframes bounce{0%,100%{-webkit-transform:translateY(0)}50%{-webkit-transform:translateY(-20px)}}@-moz-keyframes bounce{0%,100%{-moz-transform:translateY(0)}50%{-moz-transform:translateY(-20px)}}@-o-keyframes bounce{0%,100%{-o-transform:translateY(0)}50%{-o-transform:translateY(-20px)}}@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-20px)}}.bounce{-webkit-border-radius:50%;-moz-border-radius:50%;-ms-border-radius:50%;border-radius:50%;animation:bounce 2s infinite;-webkit-animation:bounce 2s infinite;-moz-animation:bounce 2s infinite;-o-animation:bounce 2s infinite}
+
+/*------------------------ 3 About ------------------------*/	
+.about{padding-top:90px}
+.about-image img{width:100%}
+.about h2{font-size:23px;line-height:30px;font-weight:700}
+.about-text{display:table;height:407px}
+.out{display:table-cell;vertical-align:middle}
+.typed-cursor{opacity:1;-webkit-animation:blink .7s infinite;-moz-animation:blink .7s infinite;animation:blink .7s infinite}
+
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}@-webkit-keyframes blink{0%,100%{opacity:1}50%{opacity:0}}@-moz-keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+.gray-bg{margin-top:90px;background:#f6f6f6}
+.what-can{padding:90px 0}
+.what-can .feature{text-align:center;margin-bottom:30px;cursor:pointer}
+.what-can .feature i{font-size:40px}
+.what-can .feature h3{font-size:13px;letter-spacing:1px;margin-bottom:11px;line-height:20px}
+.what-can .feature p{line-height:20px}
+
+/*------------------------ 4 Portfolio ------------------------*/	
+.section-title{text-align:center;padding:90px 0 60px}
+.section-title h2{font-size:23px;font-weight:700}
+.section-title p{line-height:20px}
+.portfolio_filter{text-align:center;padding-top:15px}
+.portfolio_filter ul{margin:auto;display:inline-block}
+.portfolio_filter ul li{font-size:14px;color:#777;float:left;margin-right:30px;list-style:none;cursor:pointer}
+.portfolio_filter ul li:hover{color:#000}
+.single_item{margin-bottom:30px}
+.single_item img{width:100%;transition:all ease .3s}
+.single_item img:hover{background:#fff;transition:all ease .3s}
+.select-cat{color:#000!important}
+.send-message{margin-top:60px!important}
+.send-message .subtitle{margin-bottom:30px}
+
+/*------------------------ 5 Contact ------------------------*/
+.contact-info,.contact-info i{text-align:center}
+.contact-info i{width:60px;height:60px;background:#000;border-radius:50px;color:#fff;padding-top:20px;font-size:20px;margin-bottom:15px}
+.contact-form textarea,.form-inp{width:100%;font-size:13px;font-weight:500;margin-bottom:15px}
+.contact-info p{line-height:20px;font-weight:500}
+.section-title p{margin-top:20px}
+.form-inp{height:45px;border:0;color:#000;border-bottom:solid 1px #dfdfdf;padding-left:10px}
+.contact-form textarea{border:0;border-bottom:solid 1px #dfdfdf;padding:20px 0 0 10px;height:119px}
+.contact-form{margin-top:90px}
+.contact-form .site-button{margin:30px auto 30px auto;display:block}
+.site-button{padding:13px 50px;font-size:12px;background:0 0;border:2px solid;border-radius:50px;-moz-border-radius:50px;-webkit-border-radius:50px;transition:all ease .3s;font-weight:600}
+a.site-button{border:2px solid #000;color:#000}
+.site-button:hover{background:#000;color:#fff;transition:all ease .3s}
+.has-error .requie {border-color: #a94442;}
+.help-block {margin: 0;font-size: 12px;font-weight: 500;}
+.form-inp{margin-bottom: 5px;}
+.has-success .requie {border-color: #36a336;}
+.result_div { font-size: 15px;}
+.marB15 {
+    margin-bottom: 15px !important; 
+}
+select.blood_g {
+    padding: 5px 5px;
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+/*------------------------ 6 Responsive ------------------------*/
+/*max Width 992px */
+
+@media screen and (max-width: 991px) {
+	.home-content h1{font-size:50px}
+	.what-can .feature{padding:0 30px}
+}
+
+
+/*max Width 768px */
+
+@media screen and (max-width: 767px) {
+	.home-content h1{font-size:32px;margin-bottom:10px}
+    .contact-info{margin-bottom:30px;padding:0 50px}
+    .social a{margin:0 10px;font-size:12px}
+    nav{padding:30px 15px}
+    .nav-menu{margin-top:40px;display:none;float:none;width:100%}
+    .nav-menu li{float:none;width:100%;text-align:center;height:45px;border-top:1px solid #f7f7f7;line-height:45px}
+    .responsive{float:right;display:block}
+    .about{padding-top:60px}
+    .about h2,.gray-bg{margin-top:30px}
+    .what-can{padding:45px 0}
+    .section-title{padding:60px 0 45px}
+    .portfolio_filter ul{margin-top:15px}
+    .portfolio_filter ul li{height:30px}
+}
+
+
+/*min Width 768px */
+@media screen and (min-width: 768px) {
+	.nav-menu{display: block!important;}
+}
+
+
+/*------------------------ 7 Slider & Video Home ------------------------*/
+.home-slider,.home-video{position:absolute;top:0;left:0;z-index:-1;width:100%}
+.slider{background:0 0!important}
+.home-video{height:100%}
+.about-image img{max-width:340px;margin:0 auto;display:block}
+.mini-logo img,.player video{max-width:100%}
+.player video{width:100%}
+.mini-logo{height:120px;width:120px;margin:0 auto 20px;background:#fff;display:block;border-radius:99%;overflow:hidden;padding:14px;border:1px solid transparent}
+.logo-2 img{margin-top: -10px;}
+.logo-4 {padding:22px}
+.feature .mini-logo{position: relative;top: 0;-webkit-transition:0.2s all linear;-moz-transition:0.2s all linear;-ms-transition:0.2s all linear;-o-transition:0.2s all linear;transition:0.2s all linear;}
+.feature:hover .mini-logo{position: relative;top: -15px;-webkit-transition:0.2s all linear;-moz-transition:0.2s all linear;-ms-transition:0.2s all linear;-o-transition:0.2s all linear;transition:0.2s all linear;}
+span.yt-ico{position:absolute;width:calc(100% - 30px);height:100%;background-color:transparent;left:0;top:0;right:0;margin:0 auto;background-image:url(../images/youtube.png);background-repeat:no-repeat;background-size:58px;background-position:center}
+.single_item:hover .yt-ico{-webkit-filter:grayscale(1);-moz-filter:grayscale(1);-ms-filter:grayscale(1);-o-filter:grayscale(1);filter:grayscale(1)}
+.single_item{overflow:hidden}
+.single_item:hover img{transform:scale(1.1)}
+.single_item:before{content:'';position:absolute;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,.3);z-index:1;transition:.2s all linear;opacity:0}
+.single_item:hover:before{opacity:1;transition:.2s all linear}
+.feature a {display: block;color: #666;}
+.feature:hover a{color:#999} 
+.feature:hover .mini-logo {box-shadow: 0px 5px 5px #eaeaea;}
+.logo img{max-width:150px}
+.header-social {margin-right: 9px;}
+.slider{z-index:9;position:relative;}
+.home-video{overflow:hidden;}
+.small-text {font-size: 11px;}
+.bg-image{background-size:cover;display:block;width:100%;height:100%;background-attachment:fixed}
+.padB90{padding-bottom:90px!important}
+.marT0{margin-top:0!important}
+.right-video{background-size:cover;background-repeat:no-repeat}
+nav .container{position:relative}
+.logo{position:absolute;top:-20px;left:0}
+.logo a{display:block;max-width:132px}
+.logo img{max-width:100%}
+.orange.title_bold {color: #f58121;font-weight: 600;font-size: 21px;display: block;text-align: center;}
+.person_meta{margin: 15px 0 0 0;}
+.img-person img {display: block;margin: 0 auto;width: 100%;max-width: 140px;}
+.title_name {display: block;margin: 0 0 3px 0;line-height: 24px;color: #000;text-align: center;}
+.double-form .flex_name {min-width: 230px;}
+.flex_div{min-height:35px}
+.radio_div .flex_text {padding-top: 6px;}
+.double-form {padding: 15px;border-bottom: 1px dashed #ddd;}
+.right-about p {font-size: 15px;margin: 0 0 18px 0;line-height: 27px;}
+.blog h1,.blog-single h1{line-height:24px;color:#000}
+.slide-pattern{content:"";position:absolute;top:0;left:0;width:100%;height:100%;background-color:rgba(0,0,0,.5);z-index:1}
+.home-content.bottom{position:absolute;bottom:0;display:block;width:45px;height:45px;margin:0 auto;left:0;right:0;z-index:9999}
+.ms-slide .ms-layer,.slider_texts_animated.home-content .ms-layer{position:absolute!important;top:50%!important;left:0!important;right:0!important;-webkit-transform:translateY(-50%);-moz-transform:translateY(-50%);transform:translateY(-50%)}
+.home:before{display:none}
+.slider_texts_animated.home-content{display:block;position:absolute;top:0;left:0;right:0;height:100%;width:100%}
+.advrtize .section-title{padding:30px 0}
+.advrtize{background:#fafafa;border-top:1px solid #eee;padding:30px 0 50px}
+.blog-image{height:200px;display:block;overflow:hidden;width:100%;background-size:cover;background-repeat:no-repeat;background-position:center}
+.blog-image img{width:100%}
+.blog h1{font-size:20px;margin:25px 0 13px}
+.blog-single h1{font-size:22px;margin:25px 0 12px;font-weight:700}
+.owl-carousel.owl-theme .owl-nav [class*=owl-]{float:right;margin:0;padding:10px!important;display:block;background:rgba(0,0,0,.9);color:#fff;border-radius:2px;font-size:27px;position:absolute;top:70px}
+.owl-carousel.owl-theme .owl-nav .owl-prev{float: left;margin-left: 0;left:0}
+.owl-carousel.owl-theme .owl-nav .owl-next{float: right;margin-right: 0;right:0}
+
+
+
+@media only screen and (min-width:1439px) and (max-width:1441px) {
+	.player video{display: table-cell;vertical-align: middle;height: 100%;width: auto;max-width: initial;text-align: center;margin: 0 auto;position: absolute;left: -100%;right: -100%;}
+}
+@media only screen and (max-width:1280px){
+	.player video{display: table-cell;vertical-align: middle;height: 100%;width: auto;max-width: initial;text-align: center;margin: 0 auto;position: absolute;left: -100%;right: -100%;}
+
+}
+@media only screen and (max-width:991px){
+	.about-txt {padding-top: 40px;}
+}
+@media only screen and (max-width:768px){
+	.slider{z-index:9;position:relative;height: auto !important;min-height: 500px;}
+}
+@media only screen and (max-width:600px){
+	.nav-menu li span{display:none}
+	.slider{z-index:9;position:relative;height: auto !important;min-height: 280px;}
+	.home-down{padding-left:0}
+	.home-content h1{letter-spacing:0px;    font-size: 23px;}
+	.single_item {width: 100%;}
+}

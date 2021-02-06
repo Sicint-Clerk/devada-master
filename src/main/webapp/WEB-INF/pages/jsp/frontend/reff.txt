@@ -1,0 +1,31 @@
+//- Home button remove dropdown
+//- GET a call == contact us redirect
+
+//portfolio-inner.html
+//- remove
+//	Challenges
+//	See The Result
+
+//remove Our Latest Creative Work
+
+//Some of our Clients : slider
+
+//remove icon in call
+
+//remove Ranked as #1 Top Web & App Development Companies
+
+//WHAT OUR CLIENTS SAY ABOUT NIWAX. remove left
+
+//remove LET'S WORK TOGETHER
+
+//Become Partner  : contact us
+
+single service page
+Hire a Dedicated Developer
+home page ni service INTEGRATED SERVICES
+
+Our Services remove and replace with other sec
+Some of Our Works : only 3
+
+//remove : We Love to Listen to Your Requirements
+
