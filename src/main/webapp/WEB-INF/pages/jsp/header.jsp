@@ -113,8 +113,8 @@
 				<div class="dropdown-content">
 				
 				
-				<a href="/admin/addMainService">Add Main Sevices</a>
-				<a href="/admin/addSubService">Add Sub Sevices</a>
+				<a href="/admin/addMainCategory">Add Main Category</a>
+				<a href="/admin/addSubCategory">Add Sub Category</a>
 				 
 				</div>
 				</div>

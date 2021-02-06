@@ -6,7 +6,7 @@ $(document).ready( () => {
     });
  
 });
- 
+
 function doAjax() {
     // Get form
     var form = $('#fileUploadForm')[0];
