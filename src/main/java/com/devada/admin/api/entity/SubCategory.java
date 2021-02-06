@@ -2,6 +2,9 @@ package com.devada.admin.api.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.DynamicInsert;
@@ -10,11 +13,27 @@ import org.hibernate.annotations.DynamicUpdate;
 import com.devada.base.entity.KKEntity;
 
 @Entity
-@Table(name = "subservice")
+@Table(name = "SUB_SERVICE")
 @DynamicInsert
 @DynamicUpdate
-public class SubService extends KKEntity{
-	
+public class SubCategory extends KKEntity {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	@Id
+	@Column(name = "ID")
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Integer id;
+
+	@Column(name = "MAIN_SERVICE_NAME")
+	private String mainservicename;
+
+	@Column(name = "SUB_SERVICE_NAME")
+	private String subservicename;
+
 	public String getMainservicename() {
 		return mainservicename;
 	}
@@ -31,15 +50,12 @@ public class SubService extends KKEntity{
 		this.subservicename = subservicename;
 	}
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
+	public Integer getId() {
+		return id;
+	}
 
-	@Column(name = "mainservicename")
-	  private String mainservicename;
-	
-	@Column(name = "subservicename")
-	  private String subservicename;
-	
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
 }
