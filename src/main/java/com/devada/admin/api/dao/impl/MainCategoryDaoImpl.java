@@ -7,5 +7,5 @@ import com.devada.admin.api.entity.MainCategory;
 import com.devada.base.dao.impl.BaseDaoImpl;
 
 @Service("mainServiceDao")
-public class MainServiceDaoImpl extends BaseDaoImpl<MainCategory, Integer> implements MainCategoryDao {
+public class MainCategoryDaoImpl extends BaseDaoImpl<MainCategory, Integer> implements MainCategoryDao {
 }
