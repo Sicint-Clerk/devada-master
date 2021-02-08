@@ -18,6 +18,11 @@ import com.devada.base.entity.KKEntity;
 @DynamicUpdate
 public class MainCategory extends KKEntity {
 
+	@Override
+	public String toString() {
+		return "MainCategory [id=" + id + ", maincategoryname=" + maincategoryname + "]";
+	}
+
 	/**
 	 * 
 	 */

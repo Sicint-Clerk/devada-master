@@ -57,6 +57,7 @@ import com.devada.admin.api.entity.MarriageInformation;
 import com.devada.admin.api.entity.MarriedDaughter;
 import com.devada.admin.api.entity.PersonInfoDto;
 import com.devada.admin.api.entity.PersonInformation;
+import com.devada.admin.api.entity.SubCategory;
 import com.devada.admin.api.entity.UploadImage;
 import com.devada.admin.api.repository.AdminRepository;
 import com.devada.admin.constants.AdminUiConstants;
@@ -674,6 +675,24 @@ public class AdminUIController extends BaseController {
 		ModelAndView modelAndView = new ModelAndView();
 		try {
 
+			List<MainCategory> mainCategoryList = adminRepository.getMainCategoryList();
+			modelAndView.addObject(mainCategoryList);
+			modelAndView.setViewName("jsp/addSubCategory");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return modelAndView;
+	}
+
+	@RequestMapping(value = "/saveSubCategory")
+	public ModelAndView saveSubCategory(@RequestParam("mainCategory") String mainCategory,
+			@RequestParam("subCategoryName") String subCategoryName) {
+		ModelAndView modelAndView = new ModelAndView();
+		SubCategory subCategory = new SubCategory();
+		try {
+			subCategory.setMaincategoryname(mainCategory);
+			subCategory.setSubcategoryname(subCategoryName);
+			adminRepository.saveSubCategory(subCategory);
 			modelAndView.setViewName("jsp/addSubCategory");
 		} catch (Exception e) {
 			e.printStackTrace();

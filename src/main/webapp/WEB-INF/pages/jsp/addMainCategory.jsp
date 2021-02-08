@@ -11,7 +11,6 @@
 	         <button type="submit" >Add</button>
 	         
 	      </form>
-	</div>
-	
+	</div>	
 	
 <jsp:include page="footer.jsp"></jsp:include>
