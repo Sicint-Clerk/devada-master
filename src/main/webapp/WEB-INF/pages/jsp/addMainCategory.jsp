@@ -4,11 +4,11 @@
 	<div style="text-align: center;">
 		<p><b>Add Main Service</b></p>
 		
-	      <form id="form1">
-	         Main Service Name:&nbsp;<input type="text" name="maincategoryname">
+	      <form id="form1" action="saveMainCategory">
+	         Main Service Name:&nbsp;<input type="text" id="mainCategoryText" name="mainCategoryName">
 	         <br>
 	         <br>
-	         <button type="submit" form="form1" value="Submit" name="addMain">Add</button>
+	         <button type="submit" >Add</button>
 	         
 	      </form>
 	</div>

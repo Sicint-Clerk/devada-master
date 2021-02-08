@@ -13,7 +13,7 @@ import org.hibernate.annotations.DynamicUpdate;
 import com.devada.base.entity.KKEntity;
 
 @Entity
-@Table(name = "MAIN_SERVICE")
+@Table(name = "MAIN_CATEGORY")
 @DynamicInsert
 @DynamicUpdate
 public class MainCategory extends KKEntity {
@@ -28,15 +28,15 @@ public class MainCategory extends KKEntity {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
 
-	@Column(name = "MAIN_SERVICE_NAME")
-	private String mainservicename;
+	@Column(name = "MAIN_CATEGORY_NAME")
+	private String maincategoryname;
 
-	public String getMainservicename() {
-		return mainservicename;
+	public String getMaincategoryname() {
+		return maincategoryname;
 	}
 
-	public void setMainservicename(String mainservicename) {
-		this.mainservicename = mainservicename;
+	public void setMaincategoryname(String maincategoryname) {
+		this.maincategoryname = maincategoryname;
 	}
 
 	public Integer getId() {
