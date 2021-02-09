@@ -4,7 +4,7 @@
 	<div style="text-align: center;">
 		<p><b>Add Main Service</b></p>
 		
-	      <form id="form1" action="saveMainCategory">
+	      <form id="form1" method="POST" action="saveMainCategory">
 	         Main Service Name:&nbsp;<input type="text" id="mainCategoryText" name="mainCategoryName">
 	         <br>
 	         <br>

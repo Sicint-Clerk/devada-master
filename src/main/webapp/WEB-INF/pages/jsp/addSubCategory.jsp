@@ -14,12 +14,12 @@
   
 	<div style="text-align: center;">
 	
-		<form id="form2" action="saveSubCategory">
+		<form id="form2" method="POST" action="saveSubCategory">
 		
 		<label for="mainCategory">Choose Main Category:</label>
 		
 		<select name="mainCategory" id="mainCategory">
-			<option> Select Main Category </option>
+<!-- 			<option> Select Main Category </option> -->
 		  <c:forEach items="${mainCategoryList}" var="category">
         	<option> ${category.maincategoryname} </option>
     	  </c:forEach>
