@@ -674,7 +674,6 @@ public class AdminUIController extends BaseController {
 	public ModelAndView addSubCategory() {
 		ModelAndView modelAndView = new ModelAndView();
 		try {
-
 			List<MainCategory> mainCategoryList = adminRepository.getMainCategoryList();
 			modelAndView.addObject(mainCategoryList);
 			modelAndView.setViewName("jsp/addSubCategory");
@@ -685,21 +684,21 @@ public class AdminUIController extends BaseController {
 	}
 
 	@RequestMapping(value = "/saveSubCategory")
-	public ModelAndView saveSubCategory(@RequestParam("mainCategory") String mainCategory,
+	public ModelAndView saveSubCategory(@RequestParam("mainCategory") int mainCategoryId,
 			@RequestParam("subCategoryName") String subCategoryName) {
 		ModelAndView modelAndView = new ModelAndView();
 		SubCategory subCategory = new SubCategory();
-		
 		try {
-			
+			subCategory.setMainCategoryId(mainCategoryId);
 			subCategory.setSubCategoryName(subCategoryName);
 			adminRepository.saveSubCategory(subCategory);
+			List<MainCategory> mainCategoryList = adminRepository.getMainCategoryList();
+			modelAndView.addObject(mainCategoryList);
 			modelAndView.setViewName("jsp/addSubCategory");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		return modelAndView;
-		
 	}
 
 	@RequestMapping(value = "/uploadFile")

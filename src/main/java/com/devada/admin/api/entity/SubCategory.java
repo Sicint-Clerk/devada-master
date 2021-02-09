@@ -18,9 +18,6 @@ import com.devada.base.entity.KKEntity;
 @DynamicUpdate
 public class SubCategory extends KKEntity {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 
 	@Id
@@ -57,9 +54,4 @@ public class SubCategory extends KKEntity {
 	public void setSubCategoryName(String subCategoryName) {
 		this.subCategoryName = subCategoryName;
 	}
-
-	
-
-	
-
 }
