@@ -661,7 +661,7 @@ public class AdminUIController extends BaseController {
 		ModelAndView modelAndView = new ModelAndView();
 		MainCategory mainCategory = new MainCategory();
 		try {
-			mainCategory.setMaincategoryname(mainCategoryName);
+			mainCategory.setMainCategoryName(mainCategoryName);
 			adminRepository.saveMainCategory(mainCategory);
 			modelAndView.setViewName("jsp/addMainCategory");
 		} catch (Exception e) {
@@ -689,15 +689,17 @@ public class AdminUIController extends BaseController {
 			@RequestParam("subCategoryName") String subCategoryName) {
 		ModelAndView modelAndView = new ModelAndView();
 		SubCategory subCategory = new SubCategory();
+		
 		try {
-			subCategory.setMaincategoryname(mainCategory);
-			subCategory.setSubcategoryname(subCategoryName);
+			
+			subCategory.setSubCategoryName(subCategoryName);
 			adminRepository.saveSubCategory(subCategory);
 			modelAndView.setViewName("jsp/addSubCategory");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		return modelAndView;
+		
 	}
 
 	@RequestMapping(value = "/uploadFile")

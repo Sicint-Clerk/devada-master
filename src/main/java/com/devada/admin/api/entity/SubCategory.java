@@ -28,27 +28,11 @@ public class SubCategory extends KKEntity {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
 
-	@Column(name = "MAIN_CATEGORY_NAME")
-	private String maincategoryname;
+	@Column(name = "MAIN_CATEGORY_ID")
+	private int mainCategoryId;
 
 	@Column(name = "SUB_CATEGORY_NAME")
-	private String subcategoryname;
-
-	public String getMaincategoryname() {
-		return maincategoryname;
-	}
-
-	public void setMaincategoryname(String maincategoryname) {
-		this.maincategoryname = maincategoryname;
-	}
-
-	public String getSubcategoryname() {
-		return subcategoryname;
-	}
-
-	public void setSubcategoryname(String subcategoryname) {
-		this.subcategoryname = subcategoryname;
-	}
+	private String subCategoryName;
 
 	public Integer getId() {
 		return id;
@@ -57,5 +41,25 @@ public class SubCategory extends KKEntity {
 	public void setId(Integer id) {
 		this.id = id;
 	}
+
+	public int getMainCategoryId() {
+		return mainCategoryId;
+	}
+
+	public void setMainCategoryId(int mainCategoryId) {
+		this.mainCategoryId = mainCategoryId;
+	}
+
+	public String getSubCategoryName() {
+		return subCategoryName;
+	}
+
+	public void setSubCategoryName(String subCategoryName) {
+		this.subCategoryName = subCategoryName;
+	}
+
+	
+
+	
 
 }

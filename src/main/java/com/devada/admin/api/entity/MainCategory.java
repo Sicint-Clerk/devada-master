@@ -18,14 +18,6 @@ import com.devada.base.entity.KKEntity;
 @DynamicUpdate
 public class MainCategory extends KKEntity {
 
-	@Override
-	public String toString() {
-		return "MainCategory [id=" + id + ", maincategoryname=" + maincategoryname + "]";
-	}
-
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 
 	@Id
@@ -34,15 +26,7 @@ public class MainCategory extends KKEntity {
 	private Integer id;
 
 	@Column(name = "MAIN_CATEGORY_NAME")
-	private String maincategoryname;
-
-	public String getMaincategoryname() {
-		return maincategoryname;
-	}
-
-	public void setMaincategoryname(String maincategoryname) {
-		this.maincategoryname = maincategoryname;
-	}
+	private String mainCategoryName;
 
 	public Integer getId() {
 		return id;
@@ -50,6 +34,14 @@ public class MainCategory extends KKEntity {
 
 	public void setId(Integer id) {
 		this.id = id;
+	}
+
+	public String getMainCategoryName() {
+		return mainCategoryName;
+	}
+
+	public void setMainCategoryName(String mainCategoryName) {
+		this.mainCategoryName = mainCategoryName;
 	}
 
 }
