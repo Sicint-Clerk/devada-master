@@ -25,7 +25,7 @@ public class MainCategory extends KKEntity {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
 
-	@Column(name = "MAIN_CATEGORY_NAME")
+	@Column(name = "MAIN_CATEGORY_NAME", unique = true)
 	private String mainCategoryName;
 
 	public Integer getId() {
@@ -44,4 +44,8 @@ public class MainCategory extends KKEntity {
 		this.mainCategoryName = mainCategoryName;
 	}
 
+	@Override
+	public String toString() {
+		return "MainCategory [id=" + id + ", mainCategoryName=" + mainCategoryName + "]";
+	}
 }

@@ -28,7 +28,7 @@ public class SubCategory extends KKEntity {
 	@Column(name = "MAIN_CATEGORY_ID")
 	private int mainCategoryId;
 
-	@Column(name = "SUB_CATEGORY_NAME")
+	@Column(name = "SUB_CATEGORY_NAME", unique = true)
 	private String subCategoryName;
 
 	public Integer getId() {
