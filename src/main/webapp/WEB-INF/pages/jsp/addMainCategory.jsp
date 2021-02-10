@@ -2,13 +2,14 @@
 
 
 	<div style="text-align: center;">
-		<p><b>Add Main Service</b></p>
-		
+		<p class="textsizesc"><b>Add Main Category</b></p>
+		<br><br>
 	      <form id="form1" method="POST" action="saveMainCategory">
-	         Main Service Name:&nbsp;<input type="text" id="mainCategoryText" name="mainCategoryName">
+	         <b class="textsizesc">Main Category Name:</b>&nbsp;&nbsp;
+	         <input class="inputcate" type="text" id="mainCategoryText" name="mainCategoryName" size="30" border="20">
 	         <br>
-	         <br>
-	         <button type="submit" >Add</button>
+	         <br><br><br>
+	         <button type="submit" class="btnadd">Add</button>
 	         
 	      </form>
 	</div>	

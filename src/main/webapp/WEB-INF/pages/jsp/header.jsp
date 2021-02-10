@@ -21,6 +21,30 @@
 
 <style>
 
+/* addSubCategory and addMainCategory css */
+.containerasc{
+	text-align: center;
+}
+
+.selectsize{
+	width: 200px;
+	border:2px solid black;
+}
+
+.textsizesc{
+	font-size:30px;
+}
+
+.btnadd{
+	height:35px;
+    width:80px;
+    font-size:20px;
+}
+
+.inputcate{
+	border:2px solid black;
+}
+/* addSubCategory and addMainCategory css */
 .dropbtn {
 	background-color:#212529;
     padding: 16px;
@@ -109,7 +133,7 @@
 			
 			<li class="nav-item active" >
 				<div class="dropdown">
-				<button class="dropbtn" ><i class="fas fa-fw fa-table"></i>Add Services</button>
+				<button class="dropbtn" ><i class="fas fa-fw fa-table"></i>Add Category</button>
 				<div class="dropdown-content">
 				
 				
