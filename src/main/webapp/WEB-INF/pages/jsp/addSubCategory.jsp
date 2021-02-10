@@ -3,24 +3,26 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
   
-	<div style="text-align: center;">
+	<div class="containerasc">
 	
 		<form id="form2" method="POST" action="saveSubCategory">
+			<p class="textsizesc"><b>Add Sub Category</b></p>
+			<br>
+		<label for="mainCategory" class="textsizesc"><b>Choose Main Category:</b>&nbsp;</label>
 		
-		<label for="mainCategory">Choose Main Category:</label>
-		
-		<select name="mainCategory" id="mainCategoryId">
+		<select name="mainCategory" id="mainCategoryId" class="selectsize">
 		  <c:forEach items="${mainCategoryList}" var="category">
-        	<option value="${category.id}"> ${category.mainCategoryName} </option>
+        	<option class="textsizesc" value="${category.id}"> ${category.mainCategoryName} </option>
     	  </c:forEach>
 		</select>
 		<br>
 	    <br>
 	    
-	    Enter Sub Category Name: <input type="text" name="subCategoryName">
+	    <b class="textsizesc">Enter Sub Category Name:</b>&nbsp;&nbsp;&nbsp; 
+	    <input class="inputcate" type="text" name="subCategoryName" size="30">
 	    <br>
-	    <br>
-	    <button type="submit" value="Submit">Add</button>
+	    <br><br>
+	    <button type="submit" value="Submit" class="btnadd">Add</button>
 	         
 	    </form>
 	</div>
