@@ -235,6 +235,13 @@ public class AdminRepositoryImpl<E> implements AdminRepository {
 	}
 
 	@Override
+	public List<SubCategory> getSubCategoryList() throws Exception {
+		// TODO Auto-generated method stub
+		List<SubCategory> subCategoryList = subCategoryDao.findAll(SubCategory.class);
+		return subCategoryList;
+	}
+
+	@Override
 	public MainCategory saveMainCategory(MainCategory mainCategory) throws KKDaoException {
 		// TODO Auto-generated method stub
 		try {

@@ -1,3 +1,5 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
 <header class="nav-bg-b main-header navfix fixed-top">
 			<div class="container-fluid m-pad">
 				<div class="menu-header">
@@ -47,49 +49,64 @@
 								<div class="container">
 									<div class="col-md-12">
 										<div class="sub-menu-center-block">
-											<div class="sub-menu-column">
-												<div class="menuheading">Web Developments</div>
-												<ul>
-													<li><a  href="service-inner.html">Kishan</a></li>
-													<li><a href="service-inner.html">Harsh</a></li>
-													<li><a href="service-inner.html">Deep</a></li>
-													<li><a href="service-inner.html">Laravel Development</a></li>
-													<li><a href="service-inner.html">Node Development</a></li>
-													<li><a href="service-inner.html">Codeigniter Development</a></li>
-													<li><a href="service-inner.html">ASP.Net Development</a></li>
-												</ul>
-											</div>
-											<div class="sub-menu-column">
-												<div class="menuheading">Mobile App Development </div>
-												<ul>
-													<li><a href="service-inner.html">Mobile App Development</a> </li>
-													<li><a href="service-inner.html">Android App Development</a> </li>
-													<li><a href="service-inner.html">iPhone App Development</a> </li>
-													<li><a href="service-inner.html">Windows App Development</a> </li>
-													<li><a href="service-inner.html">Custom Application Development</a> </li>
-													<li><a href="service-inner.html">Wearable App Development</a> </li>
-												</ul>
-											</div>
-											<div class="sub-menu-column">
-												<div class="menuheading">Digital Marketing</div>
-												<ul>
-													<li><a href="service-inner.html">Search Engine Optimization</a> </li>
-													<li><a href="service-inner.html">Social Media Marketing</a> </li>
-													<li><a href="service-inner.html">Pay per Click</a> </li>
-													<li><a href="service-inner.html">Content Writing</a> </li>
-													<li><a href="service-inner.html">Email Marketing</a> </li>
-												</ul>
-											</div>
-											<div class="sub-menu-column">
-												<div class="menuheading">Graphic Design</div>
-												<ul>
-													<li><a href="service-inner.html">Graphic Design Service </a> </li>
-													<li><a href="service-inner.html">Brochure Design</a> </li>
-													<li><a href="service-inner.html">Print & Packaging Design</a> </li>
-													<li><a href="service-inner.html">Logo Design</a> </li>
-													<li><a href="service-inner.html">Branding</a> </li>
-												</ul>
-											</div>
+											
+											<c:forEach items="${mainCategoryList}" var="maincategory">
+												<div class="sub-menu-column">
+											 		<div class="menuheading">${maincategory.mainCategoryName}</div>
+											 			<ul>
+											     			<c:forEach items="${subCategoryList}" var="subcategory">
+											     				<c:if test="${subcategory.mainCategoryId == maincategory.id}">
+											     	   				 <li><a href="service-inner.html"> <c:out value="${subcategory.subCategoryName}"></c:out> </a> </li>
+											     				</c:if>
+											    			 </c:forEach>
+											     		</ul>
+											     </div>
+											</c:forEach>
+											
+											
+<!-- 											<div class="sub-menu-column"> -->
+<!-- 												<div class="menuheading">Web Developments</div> -->
+<!-- 												<ul> -->
+<!-- 													<li><a  href="service-inner.html">Kishan</a></li> -->
+<!-- 													<li><a href="service-inner.html">Harsh</a></li> -->
+<!-- 													<li><a href="service-inner.html">Deep</a></li> -->
+<!-- 													<li><a href="service-inner.html">Laravel Development</a></li> -->
+<!-- 													<li><a href="service-inner.html">Node Development</a></li> -->
+<!-- 													<li><a href="service-inner.html">Codeigniter Development</a></li> -->
+<!-- 													<li><a href="service-inner.html">ASP.Net Development</a></li> -->
+<!-- 												</ul> -->
+<!-- 											</div> -->
+<!-- 											<div class="sub-menu-column"> -->
+<!-- 												<div class="menuheading">Mobile App Development </div> -->
+<!-- 												<ul> -->
+<!-- 													<li><a href="service-inner.html">Mobile App Development</a> </li> -->
+<!-- 													<li><a href="service-inner.html">Android App Development</a> </li> -->
+<!-- 													<li><a href="service-inner.html">iPhone App Development</a> </li> -->
+<!-- 													<li><a href="service-inner.html">Windows App Development</a> </li> -->
+<!-- 													<li><a href="service-inner.html">Custom Application Development</a> </li> -->
+<!-- 													<li><a href="service-inner.html">Wearable App Development</a> </li> -->
+<!-- 												</ul> -->
+<!-- 											</div> -->
+<!-- 											<div class="sub-menu-column"> -->
+<!-- 												<div class="menuheading">Digital Marketing</div> -->
+<!-- 												<ul> -->
+<!-- 													<li><a href="service-inner.html">Search Engine Optimization</a> </li> -->
+<!-- 													<li><a href="service-inner.html">Social Media Marketing</a> </li> -->
+<!-- 													<li><a href="service-inner.html">Pay per Click</a> </li> -->
+<!-- 													<li><a href="service-inner.html">Content Writing</a> </li> -->
+<!-- 													<li><a href="service-inner.html">Email Marketing</a> </li> -->
+<!-- 												</ul> -->
+<!-- 											</div> -->
+<!-- 											<div class="sub-menu-column"> -->
+<!-- 												<div class="menuheading">Graphic Design</div> -->
+<!-- 												<ul> -->
+<!-- 													<li><a href="service-inner.html">Graphic Design Service </a> </li> -->
+<!-- 													<li><a href="service-inner.html">Brochure Design</a> </li> -->
+<!-- 													<li><a href="service-inner.html">Print & Packaging Design</a> </li> -->
+<!-- 													<li><a href="service-inner.html">Logo Design</a> </li> -->
+<!-- 													<li><a href="service-inner.html">Branding</a> </li> -->
+<!-- 												</ul> -->
+<!-- 											</div> -->
 										</div>
 									</div>
 								</div>
@@ -146,51 +163,66 @@
 						</ul>
 					</li>
 				<li><a href="#">Services</a>
-				<ul>
-					<li>
-						<a href="#">Web Development</a>
-						<ul>
-							<li><a href="service-inner.html">Web Development</a></li>
-							<li><a href="service-inner.html">PHP Development</a></li>
-							<li><a href="service-inner.html">Angular JS</a></li>
-							<li><a href="service-inner.html">Laravel</a></li>
-							<li><a href="service-inner.html">Node Js</a></li>
-							<li><a href="service-inner.html">Codeigniter</a></li>
-							<li><a href="service-inner.html">ASP.Net</a></li>
-						</ul>
-					</li>
-					<li>
-						<a href="#">Mobile App Development</a>
-						<ul>
-							<li><a href="service-inner.html">Mobile App Development</a> </li>
-							<li><a href="service-inner.html">Android App</a> </li>
-							<li><a href="service-inner.html">Cross App</a> </li>
-							<li><a href="service-inner.html">Windows App</a> </li>
-							<li><a href="service-inner.html">Custom Application</a> </li>
-							<li><a href="service-inner.html">Wearable App</a> </li>
-						</ul>
-					</li>
-					<li>
-						<a href="#">Digital Marketing</a>
-						<ul>
-							<li><a href="service-inner.html">Digital Marketing Service</a> </li>
-							<li><a href="service-inner.html">Social Media Marketing</a> </li>
-							<li><a href="service-inner.html">Pay per Click</a> </li>
-							<li><a href="service-inner.html">Content Writing</a> </li>
-							<li><a href="service-inner.html">Email Marketing</a> </li>
-						</ul>
-					</li>
-					<li>
-						<a href="#">Graphic Design</a>
-						<ul>
-							<li><a href="service-inner.html">Graphic Design Service </a> </li>
-							<li><a href="service-inner.html">Brochure</a> </li>
-							<li><a href="service-inner.html">Print & Packaging</a> </li>
-							<li><a href="service-inner.html">Logo Design</a> </li>
-							<li><a href="service-inner.html">Branding</a> </li>
-						</ul>
-					</li>
-				</ul>
+					<ul>
+							<c:forEach items="${mainCategoryList}" var="maincategory">
+							<li>
+								<a href="#">${maincategory.mainCategoryName}</a>
+									<ul>
+										<c:forEach items="${subCategoryList}" var="subcategory">
+											<c:if test="${subcategory.mainCategoryId == maincategory.id}">
+												<li><a href="service-inner.html"> <c:out value="${subcategory.subCategoryName}"></c:out> </a> </li>
+											</c:if>
+										</c:forEach>
+									</ul>
+							</li>	     
+							</c:forEach>
+					</ul>
+				
+<!-- 				<ul> -->
+<!-- 					<li> -->
+<!-- 						<a href="#">Web Development</a> -->
+<!-- 						<ul> -->
+<!-- 							<li><a href="service-inner.html">Web Development</a></li> -->
+<!-- 							<li><a href="service-inner.html">PHP Development</a></li> -->
+<!-- 							<li><a href="service-inner.html">Angular JS</a></li> -->
+<!-- 							<li><a href="service-inner.html">Laravel</a></li> -->
+<!-- 							<li><a href="service-inner.html">Node Js</a></li> -->
+<!-- 							<li><a href="service-inner.html">Codeigniter</a></li> -->
+<!-- 							<li><a href="service-inner.html">ASP.Net</a></li> -->
+<!-- 						</ul> -->
+<!-- 					</li> -->
+<!-- 					<li> -->
+<!-- 						<a href="#">Mobile App Development</a> -->
+<!-- 						<ul> -->
+<!-- 							<li><a href="service-inner.html">Mobile App Development</a> </li> -->
+<!-- 							<li><a href="service-inner.html">Android App</a> </li> -->
+<!-- 							<li><a href="service-inner.html">Cross App</a> </li> -->
+<!-- 							<li><a href="service-inner.html">Windows App</a> </li> -->
+<!-- 							<li><a href="service-inner.html">Custom Application</a> </li> -->
+<!-- 							<li><a href="service-inner.html">Wearable App</a> </li> -->
+<!-- 						</ul> -->
+<!-- 					</li> -->
+<!-- 					<li> -->
+<!-- 						<a href="#">Digital Marketing</a> -->
+<!-- 						<ul> -->
+<!-- 							<li><a href="service-inner.html">Digital Marketing Service</a> </li> -->
+<!-- 							<li><a href="service-inner.html">Social Media Marketing</a> </li> -->
+<!-- 							<li><a href="service-inner.html">Pay per Click</a> </li> -->
+<!-- 							<li><a href="service-inner.html">Content Writing</a> </li> -->
+<!-- 							<li><a href="service-inner.html">Email Marketing</a> </li> -->
+<!-- 						</ul> -->
+<!-- 					</li> -->
+<!-- 					<li> -->
+<!-- 						<a href="#">Graphic Design</a> -->
+<!-- 						<ul> -->
+<!-- 							<li><a href="service-inner.html">Graphic Design Service </a> </li> -->
+<!-- 							<li><a href="service-inner.html">Brochure</a> </li> -->
+<!-- 							<li><a href="service-inner.html">Print & Packaging</a> </li> -->
+<!-- 							<li><a href="service-inner.html">Logo Design</a> </li> -->
+<!-- 							<li><a href="service-inner.html">Branding</a> </li> -->
+<!-- 						</ul> -->
+<!-- 					</li> -->
+<!-- 				</ul> -->
 				</li>
 				 
 				<li><a href="portfolio.html">Portfolio</a> </li>

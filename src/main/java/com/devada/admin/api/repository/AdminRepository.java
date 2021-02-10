@@ -55,7 +55,10 @@ public interface AdminRepository<E> {
 
 	public List<MainCategory> getMainCategoryList() throws Exception;
 
+	public List<SubCategory> getSubCategoryList() throws Exception;
+
 	public MainCategory saveMainCategory(MainCategory mainCategory) throws KKDaoException;
 
 	public SubCategory saveSubCategory(SubCategory subCategory) throws KKDaoException;
+
 }
