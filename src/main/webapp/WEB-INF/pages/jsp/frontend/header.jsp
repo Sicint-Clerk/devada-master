@@ -50,9 +50,9 @@
 											<div class="sub-menu-column">
 												<div class="menuheading">Web Developments</div>
 												<ul>
-													<li><a  href="service-inner.html">Web Development</a></li>
-													<li><a href="service-inner.html">PHP Development</a></li>
-													<li><a href="service-inner.html">Angular JS Development</a></li>
+													<li><a  href="service-inner.html">Kishan</a></li>
+													<li><a href="service-inner.html">Harsh</a></li>
+													<li><a href="service-inner.html">Deep</a></li>
 													<li><a href="service-inner.html">Laravel Development</a></li>
 													<li><a href="service-inner.html">Node Development</a></li>
 													<li><a href="service-inner.html">Codeigniter Development</a></li>

@@ -43,9 +43,4 @@ public class MainCategory extends KKEntity {
 	public void setMainCategoryName(String mainCategoryName) {
 		this.mainCategoryName = mainCategoryName;
 	}
-
-	@Override
-	public String toString() {
-		return "MainCategory [id=" + id + ", mainCategoryName=" + mainCategoryName + "]";
-	}
 }
