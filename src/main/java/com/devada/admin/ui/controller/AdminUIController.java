@@ -675,7 +675,9 @@ public class AdminUIController extends BaseController {
 		ModelAndView modelAndView = new ModelAndView();
 		try {
 			List<MainCategory> mainCategoryList = adminRepository.getMainCategoryList();
+			List<SubCategory> subCategoryList = adminRepository.getSubCategoryList();
 			modelAndView.addObject(mainCategoryList);
+			modelAndView.addObject(subCategoryList);
 			modelAndView.setViewName("jsp/addSubCategory");
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -693,7 +695,9 @@ public class AdminUIController extends BaseController {
 			subCategory.setSubCategoryName(subCategoryName);
 			adminRepository.saveSubCategory(subCategory);
 			List<MainCategory> mainCategoryList = adminRepository.getMainCategoryList();
+			List<SubCategory> subCategoryList = adminRepository.getSubCategoryList();
 			modelAndView.addObject(mainCategoryList);
+			modelAndView.addObject(subCategoryList);
 			modelAndView.setViewName("jsp/addSubCategory");
 		} catch (Exception e) {
 			e.printStackTrace();
