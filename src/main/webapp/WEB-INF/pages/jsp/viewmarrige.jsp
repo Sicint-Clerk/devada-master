@@ -45,9 +45,12 @@
 
 </head>
 <body>
+
 	<%
 	  ResourceBundle resource = ResourceBundle.getBundle("messages");
 	%>
+	
+				
 	<div id="preloader">
 		<div class="spinner">
 			<div class="uil-ripple-css" style="transform: scale(0.29);">

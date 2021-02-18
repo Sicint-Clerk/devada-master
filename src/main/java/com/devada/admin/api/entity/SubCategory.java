@@ -54,4 +54,8 @@ public class SubCategory extends KKEntity {
 	public void setSubCategoryName(String subCategoryName) {
 		this.subCategoryName = subCategoryName;
 	}
+	
+	
+	
+	
 }

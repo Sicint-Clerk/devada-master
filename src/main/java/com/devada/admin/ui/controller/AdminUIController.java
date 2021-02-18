@@ -14,6 +14,7 @@ import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 
+
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -33,6 +34,9 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.ResourceUtils;
@@ -78,7 +82,8 @@ public class AdminUIController extends BaseController {
 	@Autowired
 	private AdminRepository adminRepository;
 	private MainCategoryDao mainCategoryDao;
-
+	private Session session;
+	private SessionFactory sessionFactory;
 	/*
 	 * @Autowired private CommonUtility commonUtility;
 	 */
@@ -649,6 +654,8 @@ public class AdminUIController extends BaseController {
 	public ModelAndView addMainCategory() {
 		ModelAndView modelAndView = new ModelAndView();
 		try {
+			List<MainCategory> mainCategoryList = adminRepository.getMainCategoryList();
+			modelAndView.addObject(mainCategoryList);
 			modelAndView.setViewName("jsp/addMainCategory");
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -663,7 +670,10 @@ public class AdminUIController extends BaseController {
 		try {
 			mainCategory.setMainCategoryName(mainCategoryName);
 			adminRepository.saveMainCategory(mainCategory);
+			List<MainCategory> mainCategoryList = adminRepository.getMainCategoryList();
+			modelAndView.addObject(mainCategoryList);
 			modelAndView.setViewName("jsp/addMainCategory");
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -678,6 +688,12 @@ public class AdminUIController extends BaseController {
 			List<SubCategory> subCategoryList = adminRepository.getSubCategoryList();
 			modelAndView.addObject(mainCategoryList);
 			modelAndView.addObject(subCategoryList);
+			
+//			Session session = sessionFactory.getCurrentSession();
+//            Query query = session.createQuery("SELECT devada.main_category.main_category_name , devada.sub_category.sub_category_name from devada.sub_category INNER JOIN devada.main_category ON devada.main_category.id=devada.sub_category.main_category_id");
+////            List results = query.list();
+//            System.out.println(query);
+			
 			modelAndView.setViewName("jsp/addSubCategory");
 		} catch (Exception e) {
 			e.printStackTrace();

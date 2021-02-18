@@ -1,6 +1,12 @@
 <jsp:include page="header.jsp"></jsp:include>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-		
+		<div id="content-wrapper">
+			<div class="container-fluid">
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+					<li class="breadcrumb-item active">Uploads Ads</li>
+				</ol> 
+				
 				<div class="container h-100">
 					<div class="row h-100 justify-content-center align-items-center">
 						<div class="col-sm-5">
