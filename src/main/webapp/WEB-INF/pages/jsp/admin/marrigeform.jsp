@@ -8,7 +8,13 @@
 	
 <jsp:include page="../header.jsp"></jsp:include>
 
-
+<div id="content-wrapper">
+			<div class="container-fluid">
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+					<li class="breadcrumb-item active">Marriage Data</li>
+				</ol> 
+				
 
 				<!-- DataTables Example -->
 				<div class="card mb-3">

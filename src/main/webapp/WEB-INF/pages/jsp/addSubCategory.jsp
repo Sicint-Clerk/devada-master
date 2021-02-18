@@ -3,21 +3,29 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
   
- 
+ <div id="content-wrapper">
+			<div class="container-fluid">
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+					<li class="breadcrumb-item active">Add Category / Add Sub Category</li>
+				</ol> 
+				
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh" crossorigin="anonymous"></script>
   
 	<div class="containerasc">
 		<form id="form2" method="POST" action="saveSubCategory">
-			<p class="textsizesc"><b>Add Sub Category</b></p>
+			
 			<br>
+		
 		<label for="mainCategory" class="textsizesc"><b>Choose Main Category:</b>&nbsp;</label>
 		
 		<select name="mainCategory" id="mainCategoryId" class="selectsize">
 <!-- 		<option value=''> Select </option> -->
 		  <c:forEach items="${mainCategoryList}" var="category">
-        	<option class="textsizesc" value="${category.id}"> ${category.mainCategoryName} </option>
+        	<option class="textsizeop" value="${category.id}"> ${category.mainCategoryName} </option>
     	  </c:forEach>
 		</select>
+		
 		<br>
 	    <br>
 	    
@@ -25,10 +33,14 @@
 	    <input class="inputcate" type="text" name="subCategoryName" size="30">
 	    <br>
 	    <br><br>
-	    <button type="submit" value="Submit" class="btnadd">Add</button>
-	         
+	    <div class="divbtnc">
+	    	<button type="submit" value="Submit" class="btnadd">Add</button>
+	    </div>
+	    
 	    </form>
 	</div>
+	
+
 	
 	<br>
 	<br>
@@ -45,7 +57,13 @@
 			<tbody>
 				<c:forEach items="${subCategoryList}" var="subcategory">
 					<tr>
-						<td > ${subcategory.mainCategoryId} </td>
+						<td >  
+							<c:forEach items="${mainCategoryList}" var="maincategory">
+									<c:if test="${subcategory.mainCategoryId == maincategory.id}"> 
+										<c:out value="${maincategory.mainCategoryName}"></c:out> 
+									</c:if>
+							</c:forEach> 
+						</td>
 						<td > ${subcategory.subCategoryName } </td>
 					</tr>
 				</c:forEach>

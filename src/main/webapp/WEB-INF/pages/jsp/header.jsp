@@ -23,14 +23,20 @@
 
 /* addSubCategory and addMainCategory css */
 .containerasc{
-	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
 }
 
 .selectsize{
 	width: 200px;
 	border:2px solid black;
+	
 }
-
+.textsizeop{
+	font-size:18px;
+}
 .textsizesc{
 	font-size:30px;
 }
@@ -40,7 +46,9 @@
     width:80px;
     font-size:20px;
 }
-
+.divbtnc{
+	text-align: center;
+}
 .inputcate{
 	border:2px solid black;
 }
@@ -146,12 +154,12 @@
 			
 		</ul>
 		
-		<div id="content-wrapper">
+		 <!-- <div id="content-wrapper">
 			<div class="container-fluid">
-				<!-- Breadcrumbs-->
+				Breadcrumbs
 				<ol class="breadcrumb">
 					<li class="breadcrumb-item"><a href="#">Dashboard</a></li>
 					<li class="breadcrumb-item active">Application</li>
-				</ol>
+				</ol>  -->
 				
 		
